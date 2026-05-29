@@ -1,0 +1,251 @@
+body{
+    background: #f5f1ea;
+    font-family: 'Libre Baskerville', serif;
+    color: #2d2d2d;
+}
+
+/* TITULO */
+
+.section-header{
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.display-label{
+    color: #c28a1a;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.section-title{
+    font-size: 55px;
+    font-family: 'Cinzel Decorative', serif;
+    margin-bottom: 20px;
+    color: #1b1b1b;
+}
+
+.section-header p{
+    width: 60%;
+    margin: auto;
+    line-height: 1.9;
+    color: #555;
+}
+
+/* FILTROS */
+
+.filter-bar{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.filter-btn{
+    border: 1px solid #d6c7aa;
+    background: transparent;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+    background: #c28a1a;
+    color: white;
+    border-color: #c28a1a;
+}
+
+/* GRID */
+
+.destinos-grid{
+    width: 90%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 30px;
+
+    padding-bottom: 80px;
+}
+
+.gastronomia-grid{
+    width: 90%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 30px;
+
+    padding-bottom: 80px;
+}
+
+
+/* TARJETAS */
+
+.destino-card{
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    transition: .4s;
+}
+.gastronomia-card{
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    transition: .4s;
+}
+.destino-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+
+/* IMAGEN */
+
+.card-image{
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+}
+
+.card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ETIQUETA */
+
+.tag{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    background: #1d1d1d;
+    color: #d7a130;
+
+    padding: 8px 15px;
+    border-radius: 30px;
+
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* CONTENIDO */
+
+.card-content{
+    padding: 28px;
+}
+
+.card-content h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.card-content p{
+    color: #555;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* INFO */
+
+.info{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    color: #b07c14;
+    font-size: 14px;
+}
+
+@media(max-width: 768px){
+
+    .destinos-grid{
+
+    width: 90%;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+
+    gap: 30px;
+
+    align-items: start;
+
+    padding-bottom: 80px;
+}
+
+}
+.destino-card{
+    transition: .4s;
+}
+.destino-card{
+
+    width: 100%;
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: .4s;
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: fit-content;
+}
+.card-image{
+
+    width: 100%;
+
+    height: 230px;
+
+    overflow: hidden;
+}
+
+.card-image img{
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+.filter-bar{
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-bottom: 50px;
+}
+
+.filter-btn{
+
+    padding: 12px 22px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}

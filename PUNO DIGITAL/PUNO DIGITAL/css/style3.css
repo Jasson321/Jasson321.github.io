@@ -1,0 +1,287 @@
+/* VARIABLES DE COLORES INSPIRADOS EN PUNO */
+:root {
+  --azul-titicaca: #005F73;
+  --dorado-candelaria: #D97706;
+  --rojo-tierra: #8B1E3F;
+  --crema-altiplano: #F4EFE6;
+  --texto: #2B2B2B;
+  --blanco: #FFFFFF;
+}
+
+/* ESTILOS GENERALES */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding-top: 70px;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: var(--crema-altiplano);
+  color: var(--texto);
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+.seccion {
+  padding: 50px 0;
+}
+
+/* NAVBAR */
+.navbar-puno {
+  background-color: var(--azul-titicaca);
+}
+
+/* BOTÓN PERSONALIZADO */
+.btn-puno {
+  background-color: var(--rojo-tierra);
+  color: white;
+  font-weight: 600;
+}
+.carousel-container{
+
+    width: 75%;
+
+    max-width: 1100px;
+
+    margin: 120px auto;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.25);
+}
+
+/* IMAGENES */
+
+.carousel-item img{
+
+    height: 500px;
+
+    object-fit: cover;
+}
+.btn-puno:hover {
+  background-color: var(--dorado-candelaria);
+  color: white;
+}
+
+/* HERO DE CULTURA */
+.hero-cultura {
+  min-height: 55vh;
+  background: linear-gradient(135deg, rgba(139, 30, 63, 0.88), rgba(0, 95, 115, 0.88));
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.hero-cultura h1,
+.hero-itinerario h1 {
+  color: white;
+  font-size: clamp(32px, 5vw, 60px);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* HERO DE ITINERARIO */
+.hero-itinerario {
+  min-height: 50vh;
+  background: linear-gradient(135deg, rgba(0, 95, 115, 0.90), rgba(217, 119, 6, 0.85));
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+/* CAJAS */
+.caja-blanca {
+  background-color: var(--blanco);
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.caja-blanca h2 {
+  color: var(--rojo-tierra);
+}
+
+/* TARJETAS DE CULTURA */
+.tarjeta-cultura {
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-cultura:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+}
+
+.tarjeta-cultura h3 {
+  color: var(--rojo-tierra);
+  text-align: center;
+}
+
+.tarjeta-cultura p {
+  text-align: center;
+}
+
+/* ACORDEÓN PERSONALIZADO */
+.accordion-button {
+  background-color: var(--rojo-tierra);
+  color: white;
+  font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--dorado-candelaria);
+  color: white;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  background-color: #FFF7ED;
+  font-size: 15px;
+}
+
+/* GRID DE LUGARES */
+.grid-lugares {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.lugar-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  border-left: 6px solid var(--azul-titicaca);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.13);
+  transition: transform 0.3s ease;
+}
+
+.lugar-card:hover {
+  transform: translateY(-6px);
+}
+
+.lugar-card h3 {
+  color: var(--azul-titicaca);
+  font-size: 20px;
+}
+
+/* MAPA SIMPLE */
+.mapa-simple {
+  position: relative;
+  min-height: 330px;
+  background: linear-gradient(135deg, #9bd3dd, #e8d7a3);
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.punto {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--rojo-tierra);
+  color: white;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.punto:hover {
+  transform: scale(1.2);
+  background-color: var(--dorado-candelaria);
+}
+
+.punto1 { left: 18%; top: 45%; }
+.punto2 { left: 35%; top: 34%; }
+.punto3 { left: 65%; top: 42%; }
+.punto4 { left: 50%; top: 68%; }
+
+#textoMapa {
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin: 0;
+}
+
+/* ANIMACIÓN SIMPLE */
+.fade-in {
+  animation: aparecer 0.9s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FOOTER */
+.footer-puno {
+  background-color: var(--azul-titicaca);
+  color: white;
+  text-align: center;
+  padding: 22px;
+}
+
+.footer-puno p {
+  margin: 0;
+}
+
+/* MODO OSCURO */
+body.modo-oscuro {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+}
+
+body.modo-oscuro .caja-blanca,
+body.modo-oscuro .tarjeta-cultura,
+body.modo-oscuro .lugar-card {
+  background-color: #2d2d2d;
+  color: #f1f1f1;
+}
+
+body.modo-oscuro .accordion-body {
+  background-color: #363636;
+  color: #f1f1f1;
+}
+
+body.modo-oscuro .form-control,
+body.modo-oscuro .form-select {
+  background-color: #333;
+  color: white;
+  border-color: #666;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-cultura,
+  .hero-itinerario {
+    min-height: 45vh;
+    padding: 30px 0;
+  }
+
+  .caja-blanca {
+    padding: 22px;
+  }
+
+  .seccion {
+    padding: 35px 0;
+  }
+}
